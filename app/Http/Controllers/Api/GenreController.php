@@ -14,7 +14,7 @@ class GenreController extends Controller
     {
     }
 
-    public function __invoke()
+    public function index()
     {
         $data = $this->genreService->genreList();
 
@@ -22,6 +22,23 @@ class GenreController extends Controller
             'data' => GenreResource::collection($data),
             'message' => GenreResponseEnum::GENRE_LIST,
             'success' => true
+        ]);
+    }
+
+    public function destroy(Genre $genre)
+    {
+        $isDeleted = $this->genreService->genreDelete($genre);
+
+        if (!$isDeleted) {
+            return response()->json([
+                'message' => GenreResponseEnum::GENRE_CANNOT_DELETE,
+                'success' => false,
+            ], 400);
+        }
+
+        return response()->json([
+            'message' => GenreResponseEnum::GENRE_DELETE,
+            'success' => true,
         ]);
     }
 }

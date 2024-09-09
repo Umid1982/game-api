@@ -18,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('v1/')->group(function () {
     Route::apiResource('games', GameController::class);
-    Route::get('genres', GenreController::class);
+    Route::get('genres', [GenreController::class,'index']);
+    Route::delete('genres/{genre}', [GenreController::class, 'destroy']);
 });
