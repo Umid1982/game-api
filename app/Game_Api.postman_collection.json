@@ -1,211 +1,242 @@
 {
-	"info": {
-		"_postman_id": "9af24974-525d-4bb5-8529-98b8c1ff4dea",
-		"name": "Game_Api",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "27091565"
-	},
-	"item": [
-		{
-			"name": "Store Game",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{   //genres 1 =\"Action\",2 = \"Adventure\", 3 = \"RPG\"\r\n    \"title\": \"New Game йййй\",\r\n    \"developer\": \"Awesome Studioййййй\",\r\n    \"genres\": [1,2,3]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/games",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"games"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Show Game",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/games/27",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"games",
-						"27"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Games List",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/games",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"games"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Game",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{   //genres 1 =\"Action\",2 = \"Adventure\", 3 = \"RPG\"\r\n    \"title\": \"New Gamessswqwq   wwwwwwwwwwww йййй\",\r\n    \"developer\": \"Awesome Studioйййййq\",\r\n    \"genres\": [1]\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/games/27",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"games",
-						"27"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Game",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/games/27",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"games",
-						"27"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Genre Lists",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://127.0.0.1:8000/api/v1/genres",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"genres"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+    "info": {
+        "_postman_id": "9af24974-525d-4bb5-8529-98b8c1ff4dea",
+        "name": "Game_Api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "27091565"
+    },
+    "item": [
+        {
+            "name": "Store Game",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{   //genres 1 =\"Action\",2 = \"Adventure\", 3 = \"RPG\"\r\n    \"title\": \"New Game йййй\",\r\n    \"developer\": \"Awesome Studioййййй\",\r\n    \"genres\": [1,2,3]\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/v1/games",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "games"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Show Game",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/v1/games/28",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "games",
+                        "28"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Games List",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/v1/games",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "games"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Game",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{   //genres 1 =\"Action\",2 = \"Adventure\", 3 = \"RPG\"\r\n    \"title\": \"New Gamessswqwq   wwwwwwwwwwww йййй\",\r\n    \"developer\": \"Awesome Studioйййййq\",\r\n    \"genres\": [1]\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/v1/games/28",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "games",
+                        "28"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Game",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/v1/games/27",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "games",
+                        "27"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Genre Lists",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/v1/genres",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "genres"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Genre",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/v1/genres/1",
+                    "protocol": "http",
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "genres",
+                        "1"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
 }
